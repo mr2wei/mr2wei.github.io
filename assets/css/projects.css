@@ -1,40 +1,3 @@
-.project-content button {
-    border: 0;
-    border-radius: calc(8px + 0.3vw);
-    margin-top: 2%;
-    padding: 2% 2.8%;
-    background-color: var(--container-highlight-color);
-    font-size: calc(14px + 1.7vw);
-    color: inherit;
-    transition: all 0.2s ease-out;
-}
-
-.project-content button:hover {
-    cursor: pointer;
-    background-color: var(--button-highlight-color);
-}
-
-.project-content a {
-    color: inherit;
-}
-
-.project-content .icon {
-    font-size: calc(10px + 1.2vw);
-}
-#projects {
-    flex: 1;
-    margin-right: 2%;
-    background-color: var(--container-color);
-    padding: 2%;
-    border-radius: calc(10px + 1.1vw);
-    transition: all 0.2s ease-out;
-    height: 90vh
-}
-
-.carousel {
-    width: 100%;
-}
-
 .content {
     display: flex;
     justify-content: space-between;
@@ -47,4 +10,73 @@
     padding-right: 18%;
     writing-mode: vertical-rl;
 
+}
+#filter {
+    display: flex;
+    margin: 2% 0%;
+    padding-left: 1.6%;
+}
+
+#filter li {
+    list-style-type: none;
+    margin: 0 1.5% 0 0;
+    padding: 0.8% 1.6%;
+    background-color: var(--container-highlight-color);
+    border-radius: calc(8px + 0.4vw);
+    transition: all 0.2s ease-out;
+}
+
+#filter li:hover {
+    cursor: pointer;
+    background-color: var(--button-highlight-color);
+}
+
+#filter a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: calc(5px + 0.8vw);
+}
+
+#projects-list {
+    padding-left: 1.6%;
+}
+
+#projects-list li {
+    list-style-type: none;
+    margin: 0 0 2% 0;
+    padding: 0;
+
+}
+
+#projects-list div {
+    background-color: var(--body-color);
+    margin: 0 3.45% 0 0;
+    padding: 2%;
+    border-radius: calc(8px + 0.4vw);
+    border: 4px solid var(--container-highlight-color);
+    transition: all 0.2s ease-out;
+}
+
+#projects-list div:hover {
+    border: 4px solid var(--button-highlight-color);
+}
+
+#projects-list .has-redirect:hover {
+    background-color: var(--container-highlight-color);
+    cursor: pointer;
+}
+
+#projects-list .project-tags {
+    font-size: calc(8px + 0.4vw);
+    display: flex;
+    margin: 1% 0 1% 0;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+#projects-list .project-tags li {
+    margin: 0 1% 0 0;
+    padding: 0.2% 1%;
+    background-color: var(--container-highlight-color);
+    border-radius: calc(8px + 0.4vw);
 }
