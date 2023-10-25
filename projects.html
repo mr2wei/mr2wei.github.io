@@ -42,39 +42,112 @@
 			</div>
 		</nav>
 		<div class="content">
-			<div id="projects" class="carousel slide" data-bs-ride="carousel">
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="https://i.imgur.com/a0zyJM1.png" class="d-block w-100" alt="...">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>Discord ChatGPT</h5>
-							<p>A discord bot with ChatGPT and Dall-E integration written in python</p>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img src="https://i.imgur.com/15tEYwn.png" class="d-block w-100" alt="...">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>Discord music bot</h5>
-							<p>built on python using youtube-dl, google search, and spotify API.</p>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img src="https://i.imgur.com/UwI8LrI.png" class="d-block w-100" alt="...">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>AI PDF summariser</h5>
-							<p>built on ReactJS and utilising OpenAI API. Features page by page summarising and
-								questioning.</p>
-						</div>
-					</div>
+			<div class="projects-content" id="resume-category-content">
+				<div uk-filter="target: .js-filter">
+			
+					<ul class="uk-subnav uk-subnav-pill" id="filter">
+						<li uk-filter-control=".tag-All"><a href="#">All</a></li>
+						<li uk-filter-control=".tag-JavaScript"><a href="#">JavaScript</a></li>
+						<li uk-filter-control=".tag-Python"><a href="#">Python</a></li>
+						<li uk-filter-control=".tag-OpenAI"><a href="#">OpenAI</a></li>
+						<li uk-filter-control=".tag-API"><a href="#">API</a></li>
+						<li uk-filter-control=".tag-DataScience"><a href="#">Data Science</a></li>
+						<li uk-filter-control=".tag-HTML"><a href="#">HTML</a></li>
+						<li uk-filter-control=".tag-CSS"><a href="#">CSS</a></li>
+					</ul>
+			
+					<ul class="js-filter" id="projects-list" uk-grid>
+						<li class="tag-JavaScript tag-OpenAI tag-API tag-HTML tag-CSS tag-All">
+							<div>
+								<h4>AI PDF Summariser</h4>
+								<ul class="project-tags">
+									<li>JavaScript</li>
+									<li>OpenAI</li>
+									<li>API</li>
+									<li>HTML</li>
+									<li>CSS</li>
+								</ul>
+								<p>Developed a tool that allows users to use PDF documents as context for
+									OpenAI's GPT-4. You can summarise or ask questions on the PDF file. Main
+									goal is making textbooks easier to understand.</p>
+							</div>
+						</li>
+						<li class="tag-Python tag-API tag-All">
+							<div onclick="window.open('https://github.com/mr2wei/Discord-Spotify-radio-bot', '_blank');"
+								class="has-redirect">
+								<h4>Discord Music Bot</h4>
+								<ul class="project-tags">
+									<li>Python</li>
+									<li>API</li>
+								</ul>
+								<p>A Discord bot that plays music in voice channels. The bot uses Spotify API,
+									Google Search Engine API and many more to deliver songs you want to you and
+									your friends.</p>
+							</div>
+						</li>
+						<li class="tag-Python tag-API tag-OpenAI tag-All">
+							<div onclick="window.open('https://github.com/mr2wei/Discord-chat-gpt', '_blank');"
+								class="has-redirect">
+								<h4>Discord Chat GPT Bot</h4>
+								<ul class="project-tags">
+									<li>Python</li>
+									<li>API</li>
+									<li>OpenAI</li>
+								</ul>
+								<p>Chat GPT built straight into your discord text channels.
+									<br />
+									With quick chat creation and deletion tools,
+									it allows you to utilise ChatGPT in a familiar environment.
+									The bot allows you to generate responses onto any text channels
+									allowing collaborative usage of chatGPT.
+									The bot is also able to access GPT 4 without paying $20 per month.
+									<br />
+									With DALL-E integration, brainstorming with friends has never been easier.
+								</p>
+							</div>
+						</li>
+						<li class="tag-Python tag-DataScience tag-All">
+							<div>
+								<h4>JobStreet Webscraper</h4>
+								<ul class="project-tags">
+									<li>Python</li>
+									<li>DataScience</li>
+								</ul>
+								<p>During the Pandemic, I set out on a project to collect data from a popular
+									job searching website in my country, JobStreet. The goal was to get insights
+									on what the market is expecting, average pays advertsied and number of job
+									openings.
+								</p>
+							</div>
+						</li>
+						<li class="tag-Python tag-DataScience tag-All">
+							<div>
+								<h4>Reddit Webscraper</h4>
+								<ul class="project-tags">
+									<li>Python</li>
+									<li>DataScience</li>
+								</ul>
+								<p>During the Animal Crossing Hype,
+									I made a scraper to give me alerts when someone's island is
+									selling turnips for cheap or buying them for high prices.
+									This was my first introduction to BS4 and webscraping</p>
+							</div>
+						</li>
+						<li class="tag-Python tag-DataScience tag-All">
+							<div>
+								<h4>Constituency Welfare Assistance Heatmap</h4>
+								<ul class="project-tags">
+									<li>Python</li>
+									<li>DataScience</li>
+								</ul>
+								<p>A heatmap visualizing constituency welfare assistance. Data processed and
+									analysed using Python, Pandas, and more.</p>
+							</div>
+						</li>
+			
+					</ul>
+			
 				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#projects" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#projects" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
 			</div>
 			<div class="title">
 				<h1>Projects</h1>
