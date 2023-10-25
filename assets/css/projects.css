@@ -1,0 +1,50 @@
+.project-content button {
+    border: 0;
+    border-radius: calc(8px + 0.3vw);
+    margin-top: 2%;
+    padding: 2% 2.8%;
+    background-color: var(--container-highlight-color);
+    font-size: calc(14px + 1.7vw);
+    color: inherit;
+    transition: all 0.2s ease-out;
+}
+
+.project-content button:hover {
+    cursor: pointer;
+    background-color: var(--button-highlight-color);
+}
+
+.project-content a {
+    color: inherit;
+}
+
+.project-content .icon {
+    font-size: calc(10px + 1.2vw);
+}
+#projects {
+    flex: 1;
+    margin-right: 2%;
+    background-color: var(--container-color);
+    padding: 2%;
+    border-radius: calc(10px + 1.1vw);
+    transition: all 0.2s ease-out;
+    height: 90vh
+}
+
+.carousel {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    margin-left: 2%;
+    width: 20%;
+    padding-top: 1.5%;
+    padding-right: 18%;
+    writing-mode: vertical-rl;
+
+}

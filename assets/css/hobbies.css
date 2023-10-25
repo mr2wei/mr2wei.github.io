@@ -1,0 +1,108 @@
+body {
+    background: linear-gradient(to bottom, var(--body-color) 20%, #000 25.5%);
+}
+
+.card-body {
+    outline: none;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(101, 112, 109, 0.0),
+        0 0 10px rgba(101, 112, 109, 0.5);
+}
+
+#categories .card {
+    border-color: var(--container-highlight-color);
+    background-color: var(--container-highlight-color);
+    border-radius: 1vw;
+    width: 30%;
+    transition: all 0.2s ease-out;
+}
+
+#categories .card img{
+    padding: 2%;
+    border-radius: 1vw;
+}
+
+.hobbies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 94%;
+}
+
+.title {
+    margin-top: 2%;
+    padding-left: 4.2%;
+    writing-mode: vertical-rl;
+    width: 6%;
+    rotate: 180deg;
+    text-align: right;
+
+}
+
+.hobbies-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 130px;
+    background-color: var(--container-color);
+    color: var(--text-color);
+    border: 0;
+    border-radius: calc(5px + 0.3vw);
+}
+
+.btn:hover {
+    background-color: var(--button-highlight-color);
+}
+
+.collection-title {
+    margin-left: 2%;
+    margin-bottom: 1%;
+    color: var(--light-color);
+}
+
+#photos .card {
+    border-color: var(--container-color);
+    background-color: #000;
+    border-radius: 2vw;
+    transition: all 0.2s ease-out;
+    margin-bottom: 2.8%;
+    color: var(--light-color);
+    border: 2px solid var(--container-color);
+    padding: 2%;
+
+}
+
+#photos .card img{
+    border-radius: 1.4vw;
+    border: 2px solid var(--container-color);
+    transition: all 0.2s ease-out;
+}
+
+#photos .card div{
+    padding: 3.5% 1.9% 2.2% 1.9%;
+}
+
+#photos .card:hover {
+    border: 5px solid var(--button-highlight-color);
+    background-color: var(--dark-container-color);
+    opacity: 1;
+}
+
+#photos .card:hover img {
+    border-radius: 1.25vw;
+    border-color: var(--dark-container-color);
+}
+
+
+#photos .card div h4 {
+    margin-bottom: 1%;
+}
+
+.collection-content {
+    padding: 2%;
+}
