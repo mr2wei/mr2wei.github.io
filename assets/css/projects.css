@@ -1,15 +1,9 @@
-.content {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 .title {
     margin-left: 2%;
     width: 20%;
     padding-top: 1.5%;
-    padding-right: 18%;
-    writing-mode: vertical-rl;
-
 }
 #filter {
     display: flex;
@@ -79,4 +73,9 @@
     padding: 0.2% 1%;
     background-color: var(--container-highlight-color);
     border-radius: calc(8px + 0.4vw);
+}
+
+.projects-content{
+    width: 100%;
+    padding: 0%;
 }

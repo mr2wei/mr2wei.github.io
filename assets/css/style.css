@@ -132,6 +132,7 @@ code {
 .content {
     margin-top: 5%;
     padding: 2%;
+    min-height: 80vh;
 }
 
 i {
