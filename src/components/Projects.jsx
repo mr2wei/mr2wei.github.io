@@ -4,7 +4,7 @@ import '../styles/Projects.css';
 export default function Projects({ showBackground }) {
     const [ filter, setFilter ] = useState("Highlight")
 
-    const filterOptions = ["Highlight", "Python", "ReactJS"];
+    const filterOptions = ["Highlight", "Python", "ReactJS", "All"];
 
     const projects = [
         {
@@ -16,7 +16,7 @@ export default function Projects({ showBackground }) {
                 "Developed an AI solution utilizing Word2Vec vectorization, linear algebra and machine learning techniques to solve the word game Semantle in 3-4 guesses and increase winning chances in NYTimes game, Connections.",
                 "Utilized unsupervised machine learning algorithms like K-Means Clustering to speed up the runtime when generating guesses by a projected 50% compared to initial attempts."
             ],
-            tags: ["Python", "Highlight"]
+            tags: ["Python", "Highlight", "All"]
         },
         {
             title: "AI PDF Summariser",
@@ -27,7 +27,7 @@ export default function Projects({ showBackground }) {
                 "Optimized notetaking during textbook reading, resulting in a time savings of over 2 hours weekly, while enhancing overall comprehension; gaining interest from 10+ individuals for further developments.",
                 "Integrated OpenAI's API into a React JS application, enabling dynamic interactions and real-time response generation, boosting the app's functionality and user experience."
             ],
-            tags: ["ReactJS", "Highlight"]
+            tags: ["ReactJS", "Highlight", "All"]
         },
         {
             title: "Discord Music Bot",
@@ -39,6 +39,60 @@ export default function Projects({ showBackground }) {
                 "Integrated multiple APIs including Spotify, yt-dlp, Google Search, and Sponsorblock with Python, diversifying the bot's capabilities and significantly enhancing versality and functionality."
             ],
             tags: ["Python", "Highlight"]
+        },
+        {
+            "title": "Discord Chat GPT Bot",
+            "date": "Fall 2023",
+            "url": "https://github.com/mr2wei/Discord-chat-gpt",
+            "description": [
+                "Chat GPT built straight into your discord text channels.",
+                "With quick chat creation and deletion tools, it allows you to utilise ChatGPT in a familiar environment.",
+                "The bot allows you to generate responses onto any text channels allowing collaborative usage of chatGPT.",
+                "The bot is also able to access GPT 4 without paying $20 per month.",
+                "With DALL-E integration, brainstorming with friends has never been easier."
+            ],
+            "tags": [
+                "Python",
+                "All"
+            ]
+        },
+        {
+            "title": "JobStreet Webscraper",
+            "date": "Summer 2022",
+            "url": "https://www.github.com/mr2wei",
+            "description": [
+                "During the Pandemic, I set out on a project to collect data from a popular job searching website in my country, JobStreet. The goal was to get insights on what the market is expecting, average pays advertsied and number of job openings."
+            ],
+            "tags": [
+                "Python",
+                "All"
+            ]
+        },
+        {
+            "title": "Reddit Webscraper",
+            "date": "Sometime during the Covid-19 lockdown",
+            "url": "https://www.github.com/mr2wei",
+            "description": [
+                "During the Animal Crossing Hype, I made a scraper to give me alerts when someone's island is selling turnips for cheap or buying them for high prices. This was my first introduction to BS4 and webscraping"
+            ],
+            "tags": [
+                "Python",
+                "All"
+            ]
+        },
+        {
+            "title": "Constituency Welfare Assistance Heatmap",
+            "date": "December 2021",
+            "url": "https://www.github.com/mr2wei",
+            "description": [
+                "Developed a heatmap during my internship with the Parliament of Subang to visualize areas with high volumes of welfare assistance requests.",
+                "Heatmap along with data gathered allowed more efficient allocation of public funds within the constituency",
+                "Data processed and analysed using Python, Pandas, and more."
+            ],
+            "tags": [
+                "Python",
+                "All"
+            ]
         }
     ];
 
