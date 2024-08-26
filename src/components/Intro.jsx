@@ -1,12 +1,19 @@
 import React from "react";
 import aboutImage from "../assets/images/selfImage.png"; // Import the image
 import '../styles/Introduction.css';
+import { IoAlertCircleOutline } from 'react-icons/io5';
 
 export default function Intro ({ showBackground }) { 
     return(
         <div id="introduction" className="section-container">
             <div className={`background ${showBackground ? '' : 'bg-hidden'}`}></div>
+            {
+                window.innerWidth <= 768 && (
+                <div className='size-warning'><IoAlertCircleOutline /> This page works best in landscape or a larger screen</div>
+                )
+            }
             <div className="container">
+                
                 <div className="title">
                     <h1>Hi, I'm Wei</h1>
                 </div>
