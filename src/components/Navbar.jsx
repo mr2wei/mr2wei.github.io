@@ -26,7 +26,7 @@ export default function Navbar({ activeSection }) {
                     <a href="#photography" onClick={handleScroll('#photography')} className={activeSection === 'photography' ? 'navbar-active' : ''}>Photography</a>
                 </div> */}
                 <div className="navbar-item">
-                    <a href="https://mr2wei.github.io/AI-PDF-Summariser" onClick={handleScroll('https://mr2wei.github.io/AI-PDF-Summariser')} className={activeSection === 'pdf-ai' ? 'navbar-active' : ''}>PDF AI</a>
+                    <a href="https://mr2wei.github.io/AI-PDF-Summariser" className={activeSection === 'pdf-ai' ? 'navbar-active' : ''}>PDF AI</a>
                 </div>
             </div>
             <div className="social-media">
