@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import '../styles/Photography.css';
 import monkeyEatingFlower from '../assets/images/monkeyEatingFlower.jpeg';
 import eagle from '../assets/images/eagle.jpeg';
@@ -7,6 +7,7 @@ import monkeysCuddling from '../assets/images/monkeyscuddling.jpeg';
 import mutiara from '../assets/images/mutiara.jpeg';
 import hornbill from '../assets/images/hornbill.jpeg';
 import swallow from '../assets/images/swallow.jpeg';
+import PhotoModal from "./PhotoModal";
 
 
 export default function Photography({ showBackground }) {
@@ -72,6 +73,14 @@ export default function Photography({ showBackground }) {
             ]
         }
     ]
+
+    const [showModal, setShowModal] = useState(false);
+    const [modalImage, setModalImage] = useState(albums[0].images[0]);
+
+    const handleClose = () => {
+        setShowModal(false);
+    }
+
     return (
         <div id="photography" className="section-container">
             <div className={`background ${showBackground ? '' : 'bg-hidden'}`}></div>
@@ -86,7 +95,10 @@ export default function Photography({ showBackground }) {
                             <h2 className="item-header">{album.name}</h2>
                             <div className="album-gallery">
                                 {album.images.map((image, i) => (
-                                        <img key={i} className="gallery-image" src={image.url} alt={image.title} />
+                                        <img key={i} className="gallery-image" src={image.url} alt={image.title} onClick={() => {
+                                            setModalImage(image);
+                                            setShowModal(true);
+                                        }}/>
                                 ))}
                             </div>
                         </div>
@@ -97,6 +109,13 @@ export default function Photography({ showBackground }) {
                     Photo of the Boulder Valley Ranch in Colorado by Me.
                 </div>
             </div>
+            <PhotoModal 
+                show={showModal} 
+                handleClose={handleClose} 
+                imageUrl={modalImage.url} 
+                imageTitle={modalImage.title} 
+                imageDescription={modalImage.description}
+            />
         </div>
     )
 }
