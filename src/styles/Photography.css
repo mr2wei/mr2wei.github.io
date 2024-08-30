@@ -23,10 +23,10 @@
     height: max(300px, 50vh);
     gap: 10px;
     margin-top: 20px;
-    padding: 2px;
+    /* padding: 2px; */
     background-color: var(--border-color);
     border-radius: 6px;
-    box-shadow: 0 0 10px 5px var(--border-color);
+    box-shadow: 0 0 10px 6px var(--border-color);
 }
 
 .album-gallery::-webkit-scrollbar {

@@ -39,9 +39,14 @@
     right: 10px;
     font-size: 24px;
     cursor: pointer;
-    background: none;
+    background-color: var(--base-color);
     border: none;
     color: inherit;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-image {
@@ -62,10 +67,10 @@
 
 .modal-description h2 {
     margin: 0 0 20px;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .modal-description p {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 2rem;
 }

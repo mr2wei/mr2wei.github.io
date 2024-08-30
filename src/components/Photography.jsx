@@ -31,6 +31,11 @@ export default function Photography({ showBackground }) {
                     description: "Maybe it's a little disappointing knowing that you can't keep hanging out with your friends at 11pm."
                 },
                 {
+                    url: "https://i.imgur.com/be73A6f.png",
+                    title: "Last bus of the day",
+                    description: "Something about the soft blue lights and the empty bus makes me feel like I'm in a movie."
+                },
+                {
                     url: "https://i.imgur.com/iVYnQns.png",
                     title: "Orion Nebula",
                     description: "The orion nebula taken by me at CU Astronomy club's dark sky trip."
@@ -45,6 +50,11 @@ export default function Photography({ showBackground }) {
         {
             name: "Malaysia",
             images: [
+                {
+                    url: mutiara,
+                    title: "Mutiara Train",
+                    description: "The Mutiara train that took us to the top of Penang Hill."
+                },
                 {
                     url: "https://i.imgur.com/J1HQR4z.jpg",
                     title: "Wild Dusky Langur",
@@ -66,9 +76,44 @@ export default function Photography({ showBackground }) {
                     description: "Some fish eagle perching on a tall dead tree watching as our tour boat sped by in the river."
                 },
                 {
+                    url: hornbill,
+                    title: "Hornbill",
+                    description: "A hornbill flying above the trees in the jungles of nothern Malaysia."
+                },
+                {
+                    url: swallow,
+                    title: "Swallow",
+                    description: "A Swallow resting on a dead tree in the river."
+                },
+                {
                     url: georgetown,
                     title: "Somewhere in Georgetown",
                     description: "A street I passed by in Georgetown, Penang. The vibrant and old buildings housing closed shops contrast the tourists walking by."
+                }
+            ]
+        },
+        {
+            name: "Flowers",
+            images: [
+                {
+                    url: "https://i.imgur.com/f0GHx7v.png",
+                    title: "Backyard Rose",
+                    description: "A beautiful red rose, \nits petals soft and delicate, \ndancing in the gentle breeze, \na sight to behold. \nI shot this beautiful rose in the backyard of my sister's house."
+                },
+                {
+                    url: "https://i.imgur.com/nQSu07p.png",
+                    title: "Flower Farm in Hokkaido",
+                    description: "Taken during my visit to a lavender farm in Hokkaido."
+                },
+                {
+                    url: "https://i.imgur.com/qG4XV26.png",
+                    title: "False bird of paradise",
+                    description: "A beautiful false bird of paradise flower"
+                },
+                {
+                    url: "https://i.imgur.com/YE9xsVa.jpg",
+                    title: "Our busy pollinators",
+                    description: "A fuzzy bee in a sunflower"
                 }
             ]
         }
