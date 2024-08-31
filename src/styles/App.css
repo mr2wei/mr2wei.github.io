@@ -23,8 +23,7 @@
 
 }
 
-
-#navbar {
+.navbar {
     position: fixed;
     width: calc(100% - 40px);
     top: 22px;
@@ -44,6 +43,7 @@
     align-items: center;
     z-index: 100;
     overflow-x: auto;
+    transition: all 0.2s ease-in-out;
 }
 
 .navbar-item:last-child {
@@ -57,6 +57,7 @@
 .page-navigation {
     display: flex;
     gap: 40px;
+    transition: gap 0.2s ease-in-out;
 }
 
 .social-media a {
@@ -66,7 +67,7 @@
     padding-top: 5px;
 }
 
-#navbar a {
+.navbar a {
     position: relative;
     color: #eef1f2;
     text-decoration: none;
@@ -75,7 +76,7 @@
     display: inline-block; 
 }
 
-#navbar a:hover {
+.navbar a:hover {
     color: #D9483B;
 
 }
@@ -84,21 +85,39 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 2px; /* Control the thickness of the underline here */
-    bottom: 0; /* Adjust the position from the bottom of the anchor */
+    height: 2px; 
+    bottom: 0; 
     left: 0;
-    background-color: #eef1f2; /* Color of the underline */
-    transition: opacity 0.2s ease-in-out; /* Adjust the animation speed and style */
+    background-color: #eef1f2; 
+    transition: opacity 0.2s ease-in-out;
     opacity: 0
 }
 
-#navbar a.navbar-active::before {
+.navbar a.navbar-active::before {
     opacity: 1;
 }
 
-.navbar-active {
-    color: #D9483B; /* Optional: Change color on hover/active */
+#collapsed {
+    /* border-radius: 0px 0px 12px 12px; */
+    border-radius: 0px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
 }
+
+@media screen and (max-height: 600px) {
+    #collapsed {
+        padding: 8px 20px 6px 20px;
+    }
+    #collapsed a {
+        font-size: 1.2rem;
+    }
+}
+
+#collapsed .page-navigation {
+    gap: 30px;
+}
+
 
 .bg-hidden {
     opacity: 0 !important;

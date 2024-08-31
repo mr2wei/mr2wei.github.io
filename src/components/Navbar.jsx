@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { IoLogoLinkedin } from "react-icons/io5";
 
 export default function Navbar({ activeSection }) {
+    const [isCollapsed, setIsCollapsed] = useState(false);
+    const [lastScrollY, setLastScrollY] = useState(0);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+  
+        if (currentScrollY > lastScrollY) {
+          setIsCollapsed(true);
+        } else {
+          setIsCollapsed(false);
+        }
+  
+        setLastScrollY(currentScrollY);
+      };
+  
+      window.addEventListener('scroll', handleScroll, { passive: true });
+  
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, [lastScrollY]);
+
     const handleScroll = (anchor) => (e) => {
         e.preventDefault(); // Prevent default anchor click behavior
         const scrollToElement = document.querySelector(anchor);
@@ -11,7 +32,10 @@ export default function Navbar({ activeSection }) {
     };
 
     return (
-        <div id="navbar">
+        <nav 
+            className="navbar" 
+            id = {isCollapsed ? 'collapsed' : ''}
+        >
             <div className="page-navigation">
                 <div className="navbar-item">
                     <a href="#introduction" onClick={handleScroll('#introduction')} className={activeSection === 'introduction' ? 'navbar-active' : ''}>Intro</a>
@@ -34,6 +58,6 @@ export default function Navbar({ activeSection }) {
                     <IoLogoLinkedin />
                 </a>
             </div>
-        </div>
+        </nav>
     )
 }
