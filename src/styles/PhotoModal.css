@@ -48,7 +48,7 @@
     height: 40px;
     justify-content: center;
     align-items: center;
-    padding-bottom: 4px;
+    /* padding-bottom: 4px; */
 }
 
 .modal-image {
