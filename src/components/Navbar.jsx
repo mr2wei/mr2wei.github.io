@@ -34,7 +34,7 @@ export default function Navbar({ activeSection }) {
     return (
         <nav 
             className="navbar" 
-            id = {isCollapsed ? 'collapsed' : ''}
+            id = {isCollapsed || (window.innerHeight <= 450) ? 'collapsed' : ''}
         >
             <div className="page-navigation">
                 <div className="navbar-item">

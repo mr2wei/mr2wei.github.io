@@ -17,3 +17,9 @@
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
 }
+
+@media screen and (max-height: 450px) {
+    #introduction {
+        padding-top: 20px
+    }
+}
