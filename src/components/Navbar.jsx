@@ -4,23 +4,28 @@ import { IoLogoLinkedin } from "react-icons/io5";
 export default function Navbar({ activeSection }) {
     const [isCollapsed, setIsCollapsed] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
-  
+
     useEffect(() => {
-      const handleScroll = () => {
-        const currentScrollY = window.scrollY;
-  
-        if (currentScrollY > lastScrollY) {
-          setIsCollapsed(true);
-        } else {
-          setIsCollapsed(false);
+        if (window.innerHeight <= 450){
+            return;
         }
-  
-        setLastScrollY(currentScrollY);
-      };
-  
-      window.addEventListener('scroll', handleScroll, { passive: true });
-  
-      return () => window.removeEventListener('scroll', handleScroll);
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY < 40){
+                setIsCollapsed(false);
+            } else if (currentScrollY > lastScrollY) {
+                setIsCollapsed(true);
+            } else if (currentScrollY < lastScrollY - 20){
+                setIsCollapsed(false);
+            } 
+
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => window.removeEventListener('scroll', handleScroll);
     }, [lastScrollY]);
 
     const handleScroll = (anchor) => (e) => {
@@ -32,9 +37,9 @@ export default function Navbar({ activeSection }) {
     };
 
     return (
-        <nav 
-            className="navbar" 
-            id = {isCollapsed || (window.innerHeight <= 450) ? 'collapsed' : ''}
+        <nav
+            className="navbar"
+            id={isCollapsed || (window.innerHeight <= 450) ? 'collapsed' : ''}
         >
             <div className="page-navigation">
                 <div className="navbar-item">

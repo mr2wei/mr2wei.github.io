@@ -34,6 +34,7 @@
 }
 
 .close-button {
+    display: flex;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -47,6 +48,7 @@
     height: 40px;
     justify-content: center;
     align-items: center;
+    padding-bottom: 4px;
 }
 
 .modal-image {
@@ -63,6 +65,7 @@
     margin: 15px 0px;
     align-content: center;
     max-width: 500px;
+    overflow: auto;
 }
 
 .modal-description h2 {
