@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../styles/Projects.css';
+import '../../styles/Projects.css';
 
 export default function Projects({ showBackground }) {
     const [ filter, setFilter ] = useState("Highlight")

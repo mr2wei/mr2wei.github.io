@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import '../styles/Photography.css';
-import monkeyEatingFlower from '../assets/images/monkeyEatingFlower.jpeg';
-import eagle from '../assets/images/eagle.jpeg';
-import georgetown from '../assets/images/georgetown.jpeg';
-import monkeysCuddling from '../assets/images/monkeyscuddling.jpeg';
-import mutiara from '../assets/images/mutiara.jpeg';
-import hornbill from '../assets/images/hornbill.jpeg';
-import swallow from '../assets/images/swallow.jpeg';
+import '../../styles/Photography.css';
+import monkeyEatingFlower from '../../assets/images/monkeyEatingFlower.jpeg';
+import eagle from '../../assets/images/eagle.jpeg';
+import georgetown from '../../assets/images/georgetown.jpeg';
+import monkeysCuddling from '../../assets/images/monkeyscuddling.jpeg';
+import mutiara from '../../assets/images/mutiara.jpeg';
+import hornbill from '../../assets/images/hornbill.jpeg';
+import swallow from '../../assets/images/swallow.jpeg';
 import PhotoModal from "./PhotoModal";
 
 

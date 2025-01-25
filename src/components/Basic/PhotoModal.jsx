@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import '../styles/PhotoModal.css';
+import '../../styles/PhotoModal.css';
 
 const PhotoModal = ({ show, handleClose, imageUrl, imageTitle, imageDescription }) => {
     const [showModal, setShowModal] = useState(show);

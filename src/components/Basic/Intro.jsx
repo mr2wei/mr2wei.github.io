@@ -1,6 +1,6 @@
 import React from "react";
-import aboutImage from "../assets/images/selfImage.png"; // Import the image
-import '../styles/Introduction.css';
+import aboutImage from "../../assets/images/selfImage.png"; // Import the image
+import '../../styles/Introduction.css';
 import { IoAlertCircleOutline } from 'react-icons/io5';
 
 export default function Intro ({ showBackground }) { 

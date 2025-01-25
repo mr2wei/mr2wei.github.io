@@ -1,6 +1,6 @@
 import React from "react";
-import resume from '../assets/resume/Wei resume.pdf'
-import '../styles/Experience.css';
+import resume from '../../assets/resume/Wei resume.pdf'
+import '../../styles/Experience.css';
 
 
 export default function Experience({ showBackground }) {
