@@ -67,7 +67,7 @@ export default function Projects({ showBackground }) {
         },
         {
             "title": "JobStreet Webscraper",
-            "date": "Summer 2022",
+            "date": "January 2022",
             "url": "https://www.github.com/mr2wei",
             "description": [
                 "During the Pandemic, I set out on a project to collect data from a popular job searching website in my country, JobStreet. The goal was to get insights on what the market is expecting, average pays advertsied and number of job openings."

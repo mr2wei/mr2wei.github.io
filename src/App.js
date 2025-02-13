@@ -28,7 +28,7 @@ function App() {
       });
 
       setActiveSection(closestSection);
-    }, 400); // Debounce time of 100 milliseconds
+    }, 200); // Debounce time of 100 milliseconds
 
     window.addEventListener('scroll', handleScroll, { passive: true });
 
@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar activeSection = {activeSection}/>
+      <Navbar activeSection={activeSection} />
       <Intro showBackground={activeSection === 'introduction'} />
       <Experience showBackground={activeSection === 'experience'} />
       <Projects showBackground={activeSection === 'projects'} />
