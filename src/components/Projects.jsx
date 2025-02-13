@@ -2,47 +2,59 @@ import React, { useState } from "react";
 import '../styles/Projects.css';
 
 export default function Projects({ showBackground }) {
-    const [ filter, setFilter ] = useState("Highlight")
+    const [filter, setFilter] = useState("Highlight")
 
-    const filterOptions = ["Highlight", "Python", "ReactJS", "All"];
+    const filterOptions = ["Highlight", "Python", "C++", "CUDA", "ReactJS", "AI", "API", "All"];
 
     const projects = [
         {
+            title: "Neural Network Framework with CUDA from Scratch",
+            date: "December 2024 - Present",
+            url: "https://github.com/mr2wei/cuda-nn-framework",
+            description: [
+                "Developed a modular neural network framework using CUDA and C++, gaining a deeper understanding of how neural networks function at a low level.",
+                "Implemented fully connected layers, activation functions, forward and backward propagation, optimizers and loss functions.",
+                "Gained hands-on experience with CUDA programming by writing custom kernels for forward/backward propagation, optimizers, and loss functions while exploring memory management, optimization, and parallelization in GPU environments.",
+                "Future plans include adding support for Convolutional Layers and more to create Convolutional Neural Networks (CNNs) to enable image processing tasks."
+            ],
+            tags: ["C++", "CUDA", "Highlight", "AI", "All"]
+        },
+        {
             title: "Semantle AI + NYTimes Connections Solver - HackCU Winner",
-            date: "Spring 2024",
+            date: "March 2024",
             url: "https://devpost.com/software/mega-problem-solver",
             description: [
                 "Solved popular online puzzles and games using AI and machine learning techniques.",
                 "Developed an AI solution utilizing Word2Vec vectorization, linear algebra and machine learning techniques to solve the word game Semantle in 3-4 guesses and increase winning chances in NYTimes game, Connections.",
                 "Utilized unsupervised machine learning algorithms like K-Means Clustering to speed up the runtime when generating guesses by a projected 50% compared to initial attempts."
             ],
-            tags: ["Python", "Highlight", "All"]
+            tags: ["Python", "Highlight", "AI", "API", "All"]
         },
         {
             title: "AI PDF Summariser",
-            date: "Spring 2023",
+            date: "January 2023 - Present",
             url: "https://github.com/mr2wei/AI-PDF-Summariser",
             description: [
                 "Utilised LLMs to assist in reading, summarising and understanding PDF documents such as academic papers.",
                 "Optimized notetaking during textbook reading, resulting in a time savings of over 2 hours weekly, while enhancing overall comprehension; gaining interest from 10+ individuals for further developments.",
                 "Integrated OpenAI's API into a React JS application, enabling dynamic interactions and real-time response generation, boosting the app's functionality and user experience."
             ],
-            tags: ["ReactJS", "Highlight", "All"]
+            tags: ["ReactJS", "Highlight", "AI", "API", "All"]
         },
         {
             title: "Discord Music Bot",
-            date: "Fall 2022",
+            date: "January 2022 - May 2023",
             url: "https://github.com/mr2wei/Discord-Spotify-radio-bot",
             description: [
                 "Created a discord bot to simplify and improve playing music experience on Discord.",
                 "Designed and implemented a Discord music bot featuring intuitive UI/UX functions, enhanced recommender algorithms and seamless listening experience.",
                 "Integrated multiple APIs including Spotify, yt-dlp, Google Search, and Sponsorblock with Python, diversifying the bot's capabilities and significantly enhancing versality and functionality."
             ],
-            tags: ["Python", "Highlight"]
+            tags: ["Python", "AI", "API", "All"]
         },
         {
             "title": "Discord Chat GPT Bot",
-            "date": "Fall 2023",
+            "date": "June 2023 - November 2023",
             "url": "https://github.com/mr2wei/Discord-chat-gpt",
             "description": [
                 "Chat GPT built straight into your discord text channels.",
@@ -51,10 +63,7 @@ export default function Projects({ showBackground }) {
                 "The bot is also able to access GPT 4 without paying $20 per month.",
                 "With DALL-E integration, brainstorming with friends has never been easier."
             ],
-            "tags": [
-                "Python",
-                "All"
-            ]
+            tags: ["Python", "AI", "API", "All"]
         },
         {
             "title": "JobStreet Webscraper",
@@ -63,10 +72,7 @@ export default function Projects({ showBackground }) {
             "description": [
                 "During the Pandemic, I set out on a project to collect data from a popular job searching website in my country, JobStreet. The goal was to get insights on what the market is expecting, average pays advertsied and number of job openings."
             ],
-            "tags": [
-                "Python",
-                "All"
-            ]
+            tags: ["Python", "All"]
         },
         {
             "title": "Reddit Webscraper",
@@ -75,10 +81,7 @@ export default function Projects({ showBackground }) {
             "description": [
                 "During the Animal Crossing Hype, I made a scraper to give me alerts when someone's island is selling turnips for cheap or buying them for high prices. This was my first introduction to BS4 and webscraping"
             ],
-            "tags": [
-                "Python",
-                "All"
-            ]
+            tags: ["Python", "All"]
         },
         {
             "title": "Constituency Welfare Assistance Heatmap",
@@ -89,10 +92,7 @@ export default function Projects({ showBackground }) {
                 "Heatmap along with data gathered allowed more efficient allocation of public funds within the constituency",
                 "Data processed and analysed using Python, Pandas, and more."
             ],
-            "tags": [
-                "Python",
-                "All"
-            ]
+            tags: ["Python", "All"]
         }
     ];
 
@@ -107,7 +107,7 @@ export default function Projects({ showBackground }) {
                 <div className="filter">
                     {
                         filterOptions.map((filterOption, index) => (
-                            <button onClick={() => setFilter(filterOption)} className={filter === filterOption ? "active" : ""} key = {index}>{filterOption}</button>
+                            <button onClick={() => setFilter(filterOption)} className={filter === filterOption ? "active" : ""} key={index}>{filterOption}</button>
                         ))
                     }
                 </div>
@@ -122,6 +122,13 @@ export default function Projects({ showBackground }) {
                                 <ul>
                                     {project.description.map((desc, i) => (
                                         <li key={i}>{desc}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="item-tags">
+                                <ul className="tag-list">
+                                    {project.tags.map((tag, i) => (
+                                        <li key={i} className={`tag ${tag}-tag`}>#{tag}</li>
                                     ))}
                                 </ul>
                             </div>
