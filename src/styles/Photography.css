@@ -3,16 +3,16 @@
     transition: background-image 0.5s ease-in-out;
 }
 
-#photography .background{
+#photography .background {
     background-image: url('../assets/images/bouldervalleyranch.jpeg');
     background-size: cover;
     background-position: center;
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
 }
@@ -27,6 +27,7 @@
     background-color: var(--border-color);
     border-radius: 6px;
     box-shadow: 0 0 10px 6px var(--border-color);
+    -webkit-overflow-scrolling: touch;
 }
 
 .album-gallery::-webkit-scrollbar {
@@ -35,7 +36,8 @@
 }
 
 .album-gallery::-webkit-scrollbar-thumb {
-    background: hsl(195, 8%, 80%); /* Color of the scrollbar thumb */
+    background: hsl(195, 8%, 80%);
+    /* Color of the scrollbar thumb */
     border-radius: 12px;
     border: 4px solid var(--border-color);
     transition: all 0.2s ease;
@@ -52,4 +54,24 @@
     transform: scale(0.99);
     border: 1px solid var(--highlight-color);
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .album-gallery {
+        height: max(250px, 40vh);
+        gap: 8px;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .album-gallery {
+        height: max(200px, 35vh);
+        gap: 6px;
+        margin-top: 10px;
+    }
+
+    .gallery-image:hover {
+        transform: none;
+    }
 }
