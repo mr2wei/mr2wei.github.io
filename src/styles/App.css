@@ -359,6 +359,7 @@
         display: block;
         width: 100%;
         transition: all 0.3s ease-in-out;
+        overflow-y: hidden;
     }
 
     .hamburger-menu {
@@ -404,6 +405,7 @@
         visibility: visible !important;
         max-height: 85vh !important;
         margin-top: 15px !important;
+        margin-bottom: 10px !important;
         opacity: 1 !important;
     }
 
