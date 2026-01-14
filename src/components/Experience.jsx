@@ -4,7 +4,7 @@ import '../styles/Experience.css';
 
 
 export default function Experience({ showBackground }) {
-    const experiences = [
+    const workExperiences = [
         {
             company: "Keysight Technologies",
             title: "R&D Software Engineering Intern",
@@ -14,28 +14,21 @@ export default function Experience({ showBackground }) {
                 "Engineered a Retrieval-Augmented Generation (RAG) and conversation system using a combination of chat and embedding models along with NLP techniques through LangChain and NLTK, enhancing quality of response and user interaction.",
                 "Chatbot outperformed Confluence search, delivering more relevant and accurate results for natural language queries by 80%."
             ],
-            keywords: ["Azure", "TypeScript", "ReactJS", "Flask", "Jira", "Retrieval-Augmented Generation", "RAG", "chat models", "embedding models", "NLP", "LangChain", "NLTK"]
-        },
-        {
-            company: "Collaborative AI and Robotics Lab (CAIRO), Human Interaction & Robotics Group (HIRO)",
-            title: "Research Assistant",
-            date: "October 2023 - Present",
-            description: [
-                "Currently working with lab on better human intention prediction in assistive tech for wheelchair users using OpenCV and Graspnet for object and grasp recognition through depth camera data.",
-                "Assisted in research of causal effects of robot movements on human actions during human-robot teaming by using object detection models such as FairMOT to identify humans and their behaviours around a moving robot.",
-                "Contributed to research and co-authored a workshop paper on Causal Influence detection in Human-Robot Interactions for Causal-HRI 2024."
-            ],
-            keywords: ["OpenCV", "Graspnet", "object recognition", "grasp recognition", "depth camera", "FairMOT", "human-robot teaming", "Causal-HRI"]
+            keywords: ["Azure", "TypeScript", "ReactJS", "Flask", "Jira", "Retrieval-Augmented Generation", "RAG", "NLP", "LangChain", "NLTK"],
+            tags: ["ReactJS", "AI", "API"]
         },
         {
             company: "University of Colorado Boulder",
             title: "Learning Assistant",
             date: "January 2023 - Present",
             description: [
-                "Coordinated with professors and teaching assistants in helping over 500 students in CU's Intro to Computer Science, tutoring course concepts and providing aid to student's projects and assignments during office hours.",
-                "Applied specialized training and adopted effective communication methods to effectively address student's learning needs."
+                "Mentored over 200 students across 4 semesters in foundational programming concepts including basic data structures, object-oriented programming, and debugging techniques through weekly office hours and recitation sessions",
+                "Provided one-on-one tutoring support for students struggling with programming assignments, helping debug code and explaining fundamental CS concepts",
+                "Collaborated with instructors to refine curriculum and office hours based on observed student challenges, resulting in additional mid‑term review sessions, revised assignment structure, and topic focused office hours.",
+                "Completed pedagogical training on active learning strategies and inclusive teaching practices to create supportive learning environments for diverse student backgrounds"
             ],
-            keywords: ["teaching", "tutoring", "computer science", "student support"]
+            keywords: ["teaching", "tutoring", "computer science"],
+            tags: ["C++"]
         }
     ];
     const boldKeywords = (text, keywords) => {
@@ -52,10 +45,10 @@ export default function Experience({ showBackground }) {
             elements = elements.flatMap(element => {
                 if (typeof element === 'string') {
                     const parts = element.split(regex);
-                    return parts.map((part, index) => 
-                        part === keyword ? 
-                        <strong key={`${keyword}-${index}`}>{part}</strong> : 
-                        part
+                    return parts.map((part, index) =>
+                        part === keyword ?
+                            <strong key={`${keyword}-${index}`}>{part}</strong> :
+                            part
                     );
                 }
                 return element;
@@ -74,28 +67,36 @@ export default function Experience({ showBackground }) {
             <div className={`background ${showBackground ? '' : 'bg-hidden'}`}></div>
             <div className="container">
                 <div className="title">
-                    <h1>Experience</h1>
+                    <h1>Work Experience</h1>
                 </div>
-                <div className="full-content">
-                    {experiences.map((exp, index) => (
-                        <div key={index} className={`text-content-container ${showBackground ? '' : 'simple'}`}>
-                            <h2 className="item-header">{exp.company}</h2>
-                            <div className="item-subtitle">
-                                <h3 className="item-title">{exp.title}</h3>
-                                <h3 className="item-date">{exp.date}</h3>
-                            </div>
-                            <div className="item-description">
-                                <ul>
-                                    {exp.description.map((desc, i) => (
-                                        <li key={i}>
-                                            {boldKeywords(desc, exp.keywords)}
-                                        </li>
+                {workExperiences.map((exp, index) => (
+                    <div key={`work-${index}`} className={`text-content-container experience-item ${showBackground ? '' : 'simple'}`}>
+                        <h2 className="item-header">{exp.company}</h2>
+                        <div className="item-subtitle">
+                            <h3 className="item-title">{exp.title}</h3>
+                            <h3 className="item-date">{exp.date}</h3>
+                        </div>
+                        <div className="item-description">
+                            <ul>
+                                {exp.description.map((desc, i) => (
+                                    <li key={i}>
+                                        {boldKeywords(desc, exp.keywords)}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        {exp.tags && exp.tags.length > 0 && (
+                            <div className="item-tags">
+                                <ul className="tag-list">
+                                    {exp.tags.map((tag, i) => (
+                                        <li key={i} className={`tag ${tag}-tag`}>#{tag}</li>
                                     ))}
                                 </ul>
                             </div>
-                        </div>
-                    ))}
-                </div>
+                        )}
+                    </div>
+                ))}
+                <div className="spacer"></div>
                 <div className="content">
                     <a className="accented-half-content-button" onClick={openResume}>
                         View Full Resume

@@ -1,0 +1,22 @@
+#research {
+    position: relative;
+    transition: background-image 0.5s ease-in-out;
+}
+
+#research .background {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+        url('../assets/images/lanterns.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+

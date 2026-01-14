@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './styles/App.css';
 import Intro from './components/Intro';
 import Navbar from './components/Navbar';
+import Publications from './components/Publications';
+import ResearchExperience from './components/ResearchExperience';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import { debounce } from 'lodash';
@@ -12,7 +14,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = debounce(() => {
-      const sections = ['introduction', 'experience', 'projects', 'photography']; // Add more section IDs as needed
+      const sections = ['introduction', 'publications', 'research', 'experience', 'projects', 'photography']; // Add more section IDs as needed
       let closestSection = '';
       let smallestDistance = Infinity;
 
@@ -41,6 +43,8 @@ function App() {
     <div className="App">
       <Navbar activeSection={activeSection} />
       <Intro showBackground={activeSection === 'introduction'} />
+      <Publications showBackground={activeSection === 'publications'} />
+      <ResearchExperience showBackground={activeSection === 'research'} />
       <Experience showBackground={activeSection === 'experience'} />
       <Projects showBackground={activeSection === 'projects'} />
       <Photography showBackground={activeSection === 'photography'} />

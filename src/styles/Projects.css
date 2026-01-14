@@ -31,27 +31,6 @@
     border-color: #D9483B;
 }
 
-#projects .full-content {
-    height: 60vh;
-    overflow: auto;
-    border-radius: 12px;
-    padding-right: 6px;
-    -webkit-overflow-scrolling: touch;
-}
-
-#projects .full-content::-webkit-scrollbar {
-    border-radius: 12px;
-    background: var(--base-color);
-}
-
-#projects .full-content::-webkit-scrollbar-thumb {
-    background: var(--highlight-color);
-    /* Color of the scrollbar thumb */
-    border-radius: 12px;
-    border: 2px solid var(--base-color);
-    transition: all 0.2s ease;
-}
-
 .filter {
     display: flex;
     padding: 10px 0px;
@@ -60,10 +39,10 @@
 }
 
 .filter button {
-    background-color: hsla(5, 68%, 54%, 0.8);
+    background-color: hsla(195, 4%, 20%, 0.80);
+    border: 1px solid var(--border-color);
     font-size: 1.2rem;
     color: inherit;
-    border: none;
     padding: 10px 20px;
     border-radius: 12px;
     cursor: pointer;
@@ -72,8 +51,17 @@
 }
 
 .filter button:hover {
-    background-color: hsla(5, 68%, 54%, 60%);
+    background-color: hsla(195, 4%, 20%, 0.60);
     cursor: pointer;
+}
+
+.filter button.active {
+    background-color: hsla(5, 68%, 54%, 0.8);
+    border: 1px solid var(--highlight-color);
+}
+
+.filter button.active:hover {
+    background-color: hsla(5, 68%, 54%, 60%);
 }
 
 @media screen and (max-width: 768px) {

@@ -4,9 +4,19 @@ import '../styles/Projects.css';
 export default function Projects({ showBackground }) {
     const [filter, setFilter] = useState("Highlight")
 
-    const filterOptions = ["Highlight", "Python", "C++", "CUDA", "ReactJS", "AI", "API", "All"];
+    const filterOptions = ["Highlight", "Robotics", "Python", "C++", "CUDA", "ReactJS", "AI", "API", "All"];
 
     const projects = [
+        {
+            title: "Autonomous Grocery Shopping Robot",
+            date: "Spring 2025",
+            url: "https://github.com/weiiitt/Grocery-Shopper",
+            description: [
+                "Developed a dual-stage computer vision pipeline combining YOLO object detection with FastSAM segmentation for precise object segmentation, enabling real-time object identification and 3D coordinate extraction from RGBD camera streams.",
+                "Built a manipulation system for 7-DOF TIAGo arm with inverse kinematics solver using ikpy, multi-waypoint trajectory planning, camera-to-robot coordinate transformations, and Cartesian space end-effector control for reliable pick-and-place operations."
+            ],
+            tags: ["Python", "AI", "Highlight", "Robotics", "All"]
+        },
         {
             title: "Neural Network Framework with CUDA from Scratch",
             date: "December 2024 - Present",

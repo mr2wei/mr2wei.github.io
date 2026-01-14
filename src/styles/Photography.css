@@ -17,6 +17,10 @@
     transition: opacity 0.3s ease-in-out;
 }
 
+#photography .full-content {
+    height: auto;
+}
+
 .album-gallery {
     display: flex;
     overflow: auto;

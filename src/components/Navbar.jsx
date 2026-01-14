@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { FaGoogleScholar } from "react-icons/fa6";
 
 export default function Navbar({ activeSection }) {
     const [isCollapsed, setIsCollapsed] = useState(false);
@@ -43,31 +44,56 @@ export default function Navbar({ activeSection }) {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
+    const navItems = [
+        { href: "#introduction", key: "introduction", label: "Intro" },
+        { href: "#publications", key: "publications", label: "Publications" },
+        { href: "#research", key: "research", label: "Research" },
+        { href: "#experience", key: "experience", label: "Experience" },
+        { href: "#projects", key: "projects", label: "Projects" },
+        { href: "#photography", key: "photography", label: "Photography" },
+        // { href: "https://mr2wei.github.io/AI-PDF-Summariser", key: "pdf-ai", label: "PDF AI", external: true },
+    ];
+
+    const renderNavItems = () =>
+        navItems.map((item) => (
+            <div className="navbar-item" key={item.key}>
+                <a
+                    href={item.href}
+                    onClick={item.external ? undefined : handleScroll(item.href)}
+                    className={activeSection === item.key ? "navbar-active" : ""}
+                    {...(item.external ? { target: "_blank", rel: "noreferrer" } : {})}
+                >
+                    {item.label}
+                </a>
+            </div>
+        ));
+
     return (
         <nav
             className={`navbar ${isMobileMenuOpen ? 'mobile-expanded' : ''}`}
-            id={isCollapsed || (window.innerHeight <= 450 || window.innerWidth <= 768) ? 'collapsed' : ''}
+            id={isCollapsed || (window.innerHeight <= 450 || window.innerWidth <= 900) ? 'collapsed' : ''}
         >
             <div className="desktop-nav">
                 <div className="page-navigation">
-                    <div className="navbar-item">
-                        <a href="#introduction" onClick={handleScroll('#introduction')} className={activeSection === 'introduction' ? 'navbar-active' : ''}>Intro</a>
-                    </div>
-                    <div className="navbar-item">
-                        <a href="#experience" onClick={handleScroll('#experience')} className={activeSection === 'experience' ? 'navbar-active' : ''}>Experience</a>
-                    </div>
-                    <div className="navbar-item">
-                        <a href="#projects" onClick={handleScroll('#projects')} className={activeSection === 'projects' ? 'navbar-active' : ''}>Projects</a>
-                    </div>
-                    <div className="navbar-item">
-                        <a href="#photography" onClick={handleScroll('#photography')} className={activeSection === 'photography' ? 'navbar-active' : ''}>Photography</a>
-                    </div>
-                    <div className="navbar-item">
-                        <a href="https://mr2wei.github.io/AI-PDF-Summariser" className={activeSection === 'pdf-ai' ? 'navbar-active' : ''}>PDF AI</a>
-                    </div>
+                    {renderNavItems()}
                 </div>
                 <div className="social-media">
-                    <a href="https://www.linkedin.com/in/weijiang08/">
+                    <a
+                        href="https://scholar.google.com/citations?user=iM7rjYgAAAAJ&hl=en"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="Google Scholar"
+                        title="Google Scholar"
+                    >
+                        <FaGoogleScholar />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/weijiang08/"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="LinkedIn"
+                        title="LinkedIn"
+                    >
                         <IoLogoLinkedin />
                     </a>
                 </div>
@@ -79,28 +105,29 @@ export default function Navbar({ activeSection }) {
                         {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
                     </div>
                     <div className="social-media">
-                        <a href="https://www.linkedin.com/in/weijiang08/">
+                        <a
+                            href="https://scholar.google.com/citations?user=iM7rjYgAAAAJ&hl=en"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Google Scholar"
+                            title="Google Scholar"
+                        >
+                            <FaGoogleScholar />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/weijiang08/"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="LinkedIn"
+                            title="LinkedIn"
+                        >
                             <IoLogoLinkedin />
                         </a>
                     </div>
                 </div>
 
                 <div className={`page-navigation ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
-                    <div className="navbar-item">
-                        <a href="#introduction" onClick={handleScroll('#introduction')} className={activeSection === 'introduction' ? 'navbar-active' : ''}>Intro</a>
-                    </div>
-                    <div className="navbar-item">
-                        <a href="#experience" onClick={handleScroll('#experience')} className={activeSection === 'experience' ? 'navbar-active' : ''}>Experience</a>
-                    </div>
-                    <div className="navbar-item">
-                        <a href="#projects" onClick={handleScroll('#projects')} className={activeSection === 'projects' ? 'navbar-active' : ''}>Projects</a>
-                    </div>
-                    <div className="navbar-item">
-                        <a href="#photography" onClick={handleScroll('#photography')} className={activeSection === 'photography' ? 'navbar-active' : ''}>Photography</a>
-                    </div>
-                    <div className="navbar-item">
-                        <a href="https://mr2wei.github.io/AI-PDF-Summariser" className={activeSection === 'pdf-ai' ? 'navbar-active' : ''}>PDF AI</a>
-                    </div>
+                    {renderNavItems()}
                 </div>
             </div>
         </nav>

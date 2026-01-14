@@ -34,6 +34,10 @@
     background-color: hsla(195, 4%, 20%, 60%);
 }
 
+.experience-item:last-child {
+    margin-bottom: 0;
+}
+
 #experience {
     position: relative;
     /* Ensure the container is positioned */

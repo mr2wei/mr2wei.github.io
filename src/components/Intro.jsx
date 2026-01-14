@@ -21,6 +21,37 @@ export default function Intro({ showBackground }) {
                         <img className="image" src={aboutImage} alt="A portrait of Wei Jiangs" /> {/* Use the imported image */}
                     </div>
                 </div>
+
+                <div className="spacer"></div>
+
+                <div className={`text-content-container ${showBackground ? '' : 'simple'}`}>
+                    <h2 className="item-header">Education</h2>
+                    <div className="item-subtitle">
+                        <h3 className="item-title">University of Colorado Boulder</h3>
+                        <h3 className="item-date">Expected May 2026</h3>
+                    </div>
+                    <div className="item-description">
+                        <ul>
+                            <li>Bachelor of Science in Computer Science</li>
+                            <li>Honors: Academic honors list, Dean&apos;s List (All Semesters)</li>
+                            <li>GPA: 3.97 (CS Major: 4.0)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className={`text-content-container ${showBackground ? '' : 'simple'}`}>
+                    <h2 className="item-header">Awards &amp; Honors</h2>
+                    <div className="item-subtitle">&#8203;</div>
+                    <div className="item-description">
+                        <ul>
+                            <li>Dean&apos;s List, University of Colorado Boulder — All Semesters</li>
+                            <li>Undergraduate Research Opportunities Program (UROP), $2,000 — Summer 2025</li>
+                            <li>Undergraduate Research Opportunities Program (UROP), $1,500 — AY 2025–2026</li>
+                            <li>Summer Program for Undergraduate Research (SPUR), DLA Excellence Fund, $4,800 — Summer 2025</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div className="image-credit">
                     Photo of the US 36 Highway in Colorado by Me.
                 </div>
