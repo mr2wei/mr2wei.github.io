@@ -14,8 +14,10 @@ export default function Intro({ showBackground }) {
                 </div>
                 <div className="content">
                     <div className={`small-text-content-container ${showBackground ? '' : 'simple'}`}>
-                        I am currently a junior at the University of Colorado Boulder, pursuing a major in Computer Science. With skills in C++, Java, and Python developed through diverse projects in front-end development and data science, as well as past internship. Passionate about exploring software development and improving knowledge of artificial intelligence.
-                        I am also a photographer ready to take my hobby to the next level.
+                        I am a senior studying Computer Science at the University of Colorado Boulder (expected May 2026) focused on robotics, computer vision, and embodied AI.
+                        <br />
+                        <br />
+                        My research experience includes building visual memory systems for autonomous robots, developing vision-based grasping pipelines, and implementing multi-object tracking for behavioral analysis. I am aiming to work on long-horizon robotics moving forward, building systems that remain reliable across extended tasks and changing environments.
                     </div>
                     <div className={`small-image-content-container ${showBackground ? '' : 'simple'}`}>
                         <img className="image" src={aboutImage} alt="A portrait of Wei Jiangs" /> {/* Use the imported image */}

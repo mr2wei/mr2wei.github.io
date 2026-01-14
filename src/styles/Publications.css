@@ -19,6 +19,9 @@
     transition: opacity 0.3s ease-in-out;
 }
 
+.publication-item {
+    line-height: 1.4;
+}
 
 .publication-item a {
     color: #eef1f2;
