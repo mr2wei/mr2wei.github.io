@@ -1,28 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.e1e4e693.css",
-    "main.js": "/static/js/main.c0f5df1e.js",
+    "main.css": "/static/css/main.e316e1fc.css",
+    "main.js": "/static/js/main.4c40eff9.js",
     "static/js/453.ba0e1211.chunk.js": "/static/js/453.ba0e1211.chunk.js",
     "static/media/georgetown.jpeg": "/static/media/georgetown.61caee32ffc21b6dbf37.jpeg",
     "static/media/swallow.jpeg": "/static/media/swallow.9dee0217e33cf2f72ec0.jpeg",
     "static/media/20240117_172940.jpg": "/static/media/20240117_172940.809f3c67fd5b9f7f6b67.jpg",
+    "static/media/danang.jpg": "/static/media/danang.3d7e0f00de099b832b31.jpg",
     "static/media/IMG_0060.jpeg": "/static/media/IMG_0060.0890a8e3dc2fc5488f45.jpeg",
     "static/media/bouldervalleyranch.jpeg": "/static/media/bouldervalleyranch.7a6af2061fefe46bab42.jpeg",
+    "static/media/lanterns.jpg": "/static/media/lanterns.e213f3acde3aaacca3f8.jpg",
     "static/media/selfImage.png": "/static/media/selfImage.7320947ec430f6172600.png",
     "static/media/mutiara.jpeg": "/static/media/mutiara.68e143b5793bc0951cc5.jpeg",
     "static/media/eagle.jpeg": "/static/media/eagle.aed331dff0ce983f27a3.jpeg",
     "static/media/monkeyEatingFlower.jpeg": "/static/media/monkeyEatingFlower.5ce78cbb68f3d3a212bc.jpeg",
     "static/media/monkeyscuddling.jpeg": "/static/media/monkeyscuddling.32c67ccd8ee20de38fe2.jpeg",
-    "static/media/Wei resume.pdf": "/static/media/Wei resume.8d0adb0c5b51db5993d0.pdf",
+    "static/media/Wei resume.pdf": "/static/media/Wei resume.d9fc74bd02f091fc49bc.pdf",
     "static/media/orion.jpeg": "/static/media/orion.565abcf556605315faa4.jpeg",
     "static/media/hornbill.jpeg": "/static/media/hornbill.768fd16a753b506e905b.jpeg",
     "index.html": "/index.html",
-    "main.e1e4e693.css.map": "/static/css/main.e1e4e693.css.map",
-    "main.c0f5df1e.js.map": "/static/js/main.c0f5df1e.js.map",
+    "main.e316e1fc.css.map": "/static/css/main.e316e1fc.css.map",
+    "main.4c40eff9.js.map": "/static/js/main.4c40eff9.js.map",
     "453.ba0e1211.chunk.js.map": "/static/js/453.ba0e1211.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1e4e693.css",
-    "static/js/main.c0f5df1e.js"
+    "static/css/main.e316e1fc.css",
+    "static/js/main.4c40eff9.js"
   ]
 }
