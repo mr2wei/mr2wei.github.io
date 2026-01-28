@@ -8,6 +8,16 @@ export default function Projects({ showBackground }) {
 
     const projects = [
         {
+            title: "Autonomous Racing Robot",
+            date: "Fall 2025",
+            url: "https://github.com/annasouk/BDE-RoboRacer",
+            description: [
+                "Built an end-to-end ROS 2 autonomy stack on a modified AWS DeepRacer, integrating SLAM Toolbox mapping, Nav2 localization/navigation, TF calibration, and rosbag based data collection for repeatable indoor track deployment.",
+                "Developed a LiDAR + IMU sensing and safety pipeline, including scan sectorization for TTC-based braking/obstacle avoidance and Kalman filtering to smooth IMU and per-sector range estimates for more stable real-time behavior"
+            ],
+            tags: ["Python", "Highlight", "Robotics", "AI", "All"]
+        },
+        {
             title: "Autonomous Grocery Shopping Robot",
             date: "Spring 2025",
             url: "https://github.com/weiiitt/Grocery-Shopper",
@@ -28,6 +38,17 @@ export default function Projects({ showBackground }) {
                 "Future plans include adding support for Convolutional Layers and more to create Convolutional Neural Networks (CNNs) to enable image processing tasks."
             ],
             tags: ["C++", "CUDA", "Highlight", "AI", "All"]
+        },
+        {
+            title: "Cook County Housing Data Analysis",
+            date: "April 2024",
+            url: "https://github.com/mr2wei/CSCI3022-Project",
+            description: [
+                "Conducted comprehensive exploratory data analysis (EDA) and preprocessing on a large real estate dataset, identifying key trends and anomalies, which improved data quality and model readiness.",
+                "Developed and refined multiple linear regression models in Python with scikit-learn, reducing prediction error using techniques like transformations, one-hot encoding, and cross-validation.",
+                "Utilized visualization techniques using the python libraries matplotlib and seaborn to explore data distributions and relationships, enhancing understanding and communication of findings."
+            ],
+            tags: ["Python", "All"]
         },
         {
             title: "Semantle AI + NYTimes Connections Solver - HackCU Winner",
