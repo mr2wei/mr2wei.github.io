@@ -14,10 +14,10 @@ export default function Intro({ showBackground }) {
                 </div>
                 <div className="content">
                     <div className={`small-text-content-container ${showBackground ? '' : 'simple'}`}>
-                        I am a senior studying Computer Science at the University of Colorado Boulder (expected May 2026) focused on robotics, computer vision, and embodied AI.
+                        I recently graduated with a B.S. in Computer Science from the University of Colorado Boulder
                         <br />
                         <br />
-                        My research experience includes building visual memory systems for autonomous robots, developing vision-based grasping pipelines, and implementing multi-object tracking for behavioral analysis. I am aiming to work on long-horizon robotics moving forward, building systems that remain reliable across extended tasks and changing environments.
+                        I've built end-to-end AI applications and full-stack web systems, working from backend APIs to frontend interfaces, with a focus on integrating language models, retrieval systems, and computer vision into practical tools. My research spans visual memory for autonomous robots, vision-based grasping, and human-robot interaction, with co-authored publications at ICRA 2026 and the Causal-HRI workshop. Outside of CS, I'm into photography, bouldering, board games, and good food 😋.
                     </div>
                     <div className={`small-image-content-container ${showBackground ? '' : 'simple'}`}>
                         <img className="image" src={aboutImage} alt="A portrait of Wei Jiangs" /> {/* Use the imported image */}

@@ -8,6 +8,17 @@ export default function Projects({ showBackground }) {
 
     const projects = [
         {
+            title: "Colorado Space Grant Capstone — EVA",
+            date: "October 2025 - April 2026",
+            url: "https://github.com/EricGosnell/Environmental-Variance-Analyzer",
+            description: [
+                "Designed and documented a REST-style API for a NASA-sponsored environmental monitoring platform, covering endpoints for hardware device (pod) registration, sensor data ingestion, geospatial mapping, trend analysis, and account management.",
+                "Led frontend development in React and TypeScript, building interfaces for pod management, interactive map visualization, and time-series trend analysis of soil sensor data.",
+                "Facilitated weekly team meetings, assigned and managed tasks across team members, resolved task conflicts and workload blockers, and maintained sprint goals following an Agile development workflow."
+            ],
+            tags: ["ReactJS", "Highlight", "API", "All"]
+        },
+        {
             title: "Autonomous Racing Robot",
             date: "Fall 2025",
             url: "https://github.com/annasouk/BDE-RoboRacer",
@@ -26,6 +37,17 @@ export default function Projects({ showBackground }) {
                 "Built a manipulation system for 7-DOF TIAGo arm with inverse kinematics solver using ikpy, multi-waypoint trajectory planning, camera-to-robot coordinate transformations, and Cartesian space end-effector control for reliable pick-and-place operations."
             ],
             tags: ["Python", "AI", "Highlight", "Robotics", "All"]
+        },
+        {
+            title: "Bluesky Community Feed Recommendation System",
+            date: "April 2025",
+            url: "https://github.com/mr2wei/bluesky-bigclam-feed-EDA",
+            description: [
+                "Constructed a directed weighted interaction graph over 159K users and 24M edges from Bluesky social data, and implemented BigCLAM gradient ascent from scratch in NumPy to detect overlapping community structure across ~100 communities.",
+                "Designed a community-based personalized content recommendation pipeline that inferred user affiliation vectors from weighted interaction signals (replies, reposts, quotes) and ranked content via cosine similarity to generate curated feeds.",
+                "Built a full-stack Flask web application to visualize persona-specific curated feeds side-by-side against an uncurated baseline, with an interactive affiliation vector explorer for manual community weight tuning."
+            ],
+            tags: ["Python", "Highlight", "AI", "All"]
         },
         {
             title: "Neural Network Framework with CUDA from Scratch",
@@ -59,7 +81,18 @@ export default function Projects({ showBackground }) {
                 "Developed an AI solution utilizing Word2Vec vectorization, linear algebra and machine learning techniques to solve the word game Semantle in 3-4 guesses and increase winning chances in NYTimes game, Connections.",
                 "Utilized unsupervised machine learning algorithms like K-Means Clustering to speed up the runtime when generating guesses by a projected 50% compared to initial attempts."
             ],
-            tags: ["Python", "Highlight", "AI", "API", "All"]
+            tags: ["Python", "AI", "API", "All"]
+        },
+        {
+            title: "PDF.ai",
+            date: "November 2023 - December 2023",
+            url: "https://github.com/edkiernan/PDF.ai-CSCI3308",
+            description: [
+                "Built a full-stack PDF summarization web application with multi-user support and session-based authentication using Node.js, Express, PostgreSQL, and Google Cloud Storage.",
+                "Integrated Google VertexAI to power intelligent PDF summarization, enabling dynamic interactions and real-time response generation for academic papers and documents.",
+                "Optimized document comprehension workflows for multiple users, reducing time spent reading lengthy PDFs while enhancing understanding of complex academic content."
+            ],
+            tags: ["AI", "Highlight", "API", "All"]
         },
         {
             title: "AI PDF Summariser",
@@ -70,7 +103,7 @@ export default function Projects({ showBackground }) {
                 "Optimized notetaking during textbook reading, resulting in a time savings of over 2 hours weekly, while enhancing overall comprehension; gaining interest from 10+ individuals for further developments.",
                 "Integrated OpenAI's API into a React JS application, enabling dynamic interactions and real-time response generation, boosting the app's functionality and user experience."
             ],
-            tags: ["ReactJS", "Highlight", "AI", "API", "All"]
+            tags: ["ReactJS", "AI", "API", "All"]
         },
         {
             title: "Discord Music Bot",
