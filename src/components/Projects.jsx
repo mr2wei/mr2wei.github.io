@@ -51,7 +51,7 @@ export default function Projects({ showBackground }) {
         },
         {
             title: "Neural Network Framework with CUDA from Scratch",
-            date: "December 2024 - Present",
+            date: "December 2024 - April 2025",
             url: "https://github.com/mr2wei/cuda-nn-framework",
             description: [
                 "Developed a modular neural network framework using CUDA and C++, gaining a deeper understanding of how neural networks function at a low level.",
@@ -96,7 +96,7 @@ export default function Projects({ showBackground }) {
         },
         {
             title: "AI PDF Summariser",
-            date: "January 2023 - Present",
+            date: "January 2023 - 2025",
             url: "https://github.com/mr2wei/AI-PDF-Summariser",
             description: [
                 "Utilised LLMs to assist in reading, summarising and understanding PDF documents such as academic papers.",
