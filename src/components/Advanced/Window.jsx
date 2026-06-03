@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Rnd } from "react-rnd";
 import PDFViewer from "./PDFViewer";
+import FinderContent from "./FinderContent";
 
 
-function Window({ item, onClose, activeWindow, setActiveWindow }) {
+function Window({ item, onClose, isActive, zIndex, onActivate, onOpenFile }) {
+    const defaultWidth = item.defaultWidth || 600;
+    const defaultHeight = item.defaultHeight || 500;
     const [textFileContent, setTextFileContent] = React.useState("");
-    const [size, setSize] = useState({ width: 600, height: 500 });
-    const [position, setPosition] = useState({ x: (window.innerWidth - 600) / 2, y: (window.innerHeight - 650) / 2 });
+    const [size, setSize] = useState({ width: defaultWidth, height: defaultHeight });
+    const [position, setPosition] = useState({ x: (window.innerWidth - defaultWidth) / 2, y: (window.innerHeight - defaultHeight - 125) / 2 });
     const [isMaximized, setIsMaximized] = useState(false);
-    const [previousSize, setPreviousSize] = useState({ width: 600, height: 650 });
-    const [previousPosition, setPreviousPosition] = useState({ x: (window.innerWidth - 600) / 2, y: (window.innerHeight - 650) / 2 });
+    const [previousSize, setPreviousSize] = useState({ width: defaultWidth, height: defaultHeight });
+    const [previousPosition, setPreviousPosition] = useState({ x: (window.innerWidth - defaultWidth) / 2, y: (window.innerHeight - defaultHeight - 125) / 2 });
     const [isExpanding, setIsExpanding] = useState(false);
     useEffect(() => {
         if (item.type === 'text') {
@@ -24,11 +27,11 @@ function Window({ item, onClose, activeWindow, setActiveWindow }) {
         <Rnd
             size={{ width: size.width, height: size.height }}
             position={position}
-            onDrag={() => {
-                setActiveWindow(item.id);
+            onDragStart={() => {
+                onActivate();
             }}
-            onResize={() => {
-                setActiveWindow(item.id);
+            onResizeStart={() => {
+                onActivate();
             }}
             onResizeStop={(e, direction, ref, delta, position) => {
                 setSize({
@@ -51,15 +54,15 @@ function Window({ item, onClose, activeWindow, setActiveWindow }) {
                 y: (window.innerHeight - 650) / 2,
                 width: 600,
             }}
-            minWidth= "300px"
-            minHeight= "300px"
+            minWidth={item.minWidth || "300px"}
+            minHeight={item.minHeight || "300px"}
             bounds="parent"
             dragHandleClassName="drag-handle"
-            style={{zIndex: 2}}
-            className={`${isExpanding ? 'expanding' : ''} ${activeWindow === item.id ? 'active-window' : ''}`}
-            onClick={() => setActiveWindow(item.id)}
+            style={{zIndex: zIndex}}
+            className={`${isExpanding ? 'expanding' : ''} ${isActive ? 'active-window' : ''}`}
+            onClick={() => onActivate()}
         >
-            <div className={`window-container ${activeWindow === item.id ? 'active-window-container' : ''}`}>
+            <div className={`window-container ${isActive ? 'active-window-container' : ''}`}>
                 <div className="window-header drag-handle">
                     {item.label}
                     <div className = "window-action-buttons" >
@@ -106,6 +109,12 @@ function Window({ item, onClose, activeWindow, setActiveWindow }) {
                                 className="image-file" 
                                 style={{ height: '100%', width: '100%', objectFit: 'contain' }}
                             />
+                        )
+                    }
+                    {
+                        item.type === 'finder' &&
+                        (
+                            <FinderContent onOpenFile={onOpenFile} />
                         )
                     }
                 </div>
