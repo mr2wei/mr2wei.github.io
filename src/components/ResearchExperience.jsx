@@ -9,8 +9,10 @@ export default function ResearchExperience({ showBackground }) {
             date: "June 2025 - August 2025",
             description: [
                 "Built a visual memory pipeline that reduced the number of frames retained by up to 95% while preserving narrative continuity and informational content across long videos, lowering storage requirements.",
-                "Utilized custom classification models and VLM captioning to filter and store visual-textual memories.",
-                "Designed a multi-vector long-term memory with semantic, temporal-window, and spatial-proximity queries for location/object finding."
+                "Developed a multimodal data pipeline for collecting, captioning, and storing visual-textual memories using custom classification models and VLM captioning for intelligent content filtering and organization.",
+                "Designed a multi-vector long-term memory with semantic, temporal-window, and spatial-proximity queries for location/object finding.",
+                "Engineered a retrieval-augmented reasoning system extending RAG with LangGraph orchestration and LLM-driven planning, enabling multi-step semantic, spatial, and temporal querying over large-scale multimodal datasets.",
+                "Developed a custom Android application in Kotlin leveraging Google ARCore pose estimation for real-time 6-DOF pose data collection, maintaining ROS compatibility via rosbridge for seamless integration with existing robotics pipelines."
             ],
             keywords: ["Vision Language Models", "VLM", "classification", "semantic", "temporal", "spatial"],
             tags: ["AI", "Python", "Robotics"]
@@ -23,7 +25,7 @@ export default function ResearchExperience({ showBackground }) {
                 "Implemented FairMOT on SCAND to generate pedestrian tracking data and robot-relative positions, providing early insights that shaped causal influence detection research resulting in workshop paper.",
                 "Built an RGBD grasping pipeline for realsense cameras with YOLO models, FastSAM and GraspNet for quick and accurate object segmentation and ranked grasp proposals for shared-autonomy research.",
                 "Built MuJoCo and Webots simulation environments, conducted 25-participant user study, and analyzed results showing 97% (manipulation) and 78% (navigation) reward accuracy for CRED system.",
-                "Research led to co-authored publications: workshop paper on causal influence detection (Causal-HRI 2024), paper on active preference learning (in submission), and shared autonomy paper (in progress)"
+                "Research led to co-authored publications: workshop paper on causal influence detection (Causal-HRI 2024), paper on active preference learning (published ICRA 2026), and shared autonomy paper (in progress)"
             ],
             keywords: ["FairMOT", "RGBD", "YOLO", "FastSAM", "GraspNet", "MuJoCo", "Webots", "CRED"],
             tags: ["AI", "Python", "Robotics"]

@@ -30,7 +30,7 @@ export default function Intro({ showBackground }) {
                     <h2 className="item-header">Education</h2>
                     <div className="item-subtitle">
                         <h3 className="item-title">University of Colorado Boulder</h3>
-                        <h3 className="item-date">Expected May 2026</h3>
+                        <h3 className="item-date">Aug 2022 – May 2026</h3>
                     </div>
                     <div className="item-description">
                         <ul>

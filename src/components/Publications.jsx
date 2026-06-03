@@ -5,7 +5,8 @@ import "../styles/Publications.css";
 export default function Publications({ showBackground }) {
     const publications = [
         {
-            text: 'Tung, Y.-S., Kumar, G., Jiang, W., Hayes, B., & Roncone, A. "CRED: Counterfactual Reasoning and Environment Design for Active Preference Learning," under review for ICRA 2026, 2025',
+            text: 'Tung, Y.-S., Kumar, G., Jiang, W., Hayes, B., & Roncone, A. "CRED: Counterfactual Reasoning and Environment Design for Active Preference Learning," ICRA 2026, 2025',
+            url: "https://hiro-group.ronc.one/papers/2026_Tung_ICRA_CRED.pdf",
         },
         {
             text: 'Tung, Y.-S., Gupta, H., Jiang, W., Hayes, B., & Roncone, A. "Causal Influence Detection for Human Robot Interaction," workshop on Causal Inference for Human-Robot Interaction (Causal-HRI), 2024',

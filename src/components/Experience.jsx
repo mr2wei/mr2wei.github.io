@@ -20,7 +20,7 @@ export default function Experience({ showBackground }) {
         {
             company: "University of Colorado Boulder",
             title: "Learning Assistant",
-            date: "January 2023 - Present",
+            date: "January 2023 - December 2024",
             description: [
                 "Mentored over 200 students across 4 semesters in foundational programming concepts including basic data structures, object-oriented programming, and debugging techniques through weekly office hours and recitation sessions",
                 "Provided one-on-one tutoring support for students struggling with programming assignments, helping debug code and explaining fundamental CS concepts",
